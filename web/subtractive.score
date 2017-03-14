@@ -1,0 +1,48 @@
+<score bpm="60" beatspermeasure="4">
+<script id="tinyhippos-injected"/>
+<effectconfig name="Reverb" slot="0"/>
+<effectconfig name="Chorus" slot="1"/>
+<effectconfig name="Flange" slot="2"/>
+<instrumentparams instrument="Subtractive" bypassgain="0.3" effect0="0" effect1="0" effect2="0.0" effect3="0"/>
+<instrument instrument="Subtractive">
+<note measure="1" beat="1" duration="0.25" note="E5 sq"/>
+<note measure="1" beat="2" duration="0.25" note="E5 sq"/>
+<note measure="1" beat="3" duration="0.25" note="E5 sq"/>
+<note measure="1" beat="4" duration="0.25" note="C5 sq"/>
+<note measure="1" beat="4" duration="0.25" note="C5 sq"/>
+<note measure="1" beat="1" duration="0.15" note="G4 tr"/>
+<note measure="1" beat="3" duration="0.15" note="C#5tr"/>
+<note measure="2" beat="1" duration="0.25" note="G5 sw"/>
+<note measure="2" beat="2" duration="0.25" note="A0 sw"/>
+<note measure="2" beat="3" duration="0.25" note="B5 sw"/>
+<note measure="2" beat="4" duration="0.25" note="A1 sw"/>
+<note measure="3" beat="1" duration="0.25" note="F#7sq"/>
+<note measure="3" beat="2" duration="0.25" note="A0 tr"/>
+<note measure="3" beat="3" duration="0.25" note="Bb4sw"/>
+<note measure="3" beat="4" duration="0.25" note="A1 tr"/>
+<note measure="3" beat="1" duration="0.5" note="D4 sq"/>
+<note measure="3" beat="3" duration="0.5" note="C#2sw"/>
+<note measure="3" beat="4" duration="0.25" note="A2 tr"/>
+<note measure="4" beat="1" duration="0.25" note="E4 sw"/>
+<note measure="4" beat="2" duration="0.25" note="E5 sw"/>
+<note measure="4" beat="3" duration="0.25" note="E5 sw"/>
+<note measure="4" beat="4" duration="0.25" note="C5 tr"/>
+<note measure="5" beat="1" duration="0.5" note="G4 sw"/>
+<note measure="5" beat="1" duration="0.5" note="C5 sq"/>
+<note measure="5" beat="3" duration="0.5" note="G4 sq"/>
+<note measure="5" beat="3" duration="0.5" note="E4 tr"/>
+<note measure="6" beat="1" duration="0.5" note="Ab4tr"/>
+<note measure="6" beat="1" duration="0.5" note="A4 tr"/>
+<note measure="6" beat="3" duration="0.25" note="G4 tr"/>
+<note measure="6" beat="3" duration="0.5" note="C5 tr"/>
+<note measure="7" beat="1" duration="0.25" note="A0 sq"/>
+<note measure="7" beat="2" duration="0.25" note="A0 tr"/>
+<note measure="7" beat="3" duration="0.25" note="A0 sw"/>
+<note measure="7" beat="4" duration="0.25" note="A1 sq"/>
+<note measure="8" beat="1" duration="0.25" note="A0 tr"/>
+<note measure="8" beat="2" duration="0.25" note="A0 sw"/>
+<note measure="8" beat="3" duration="2" note="A1 sq"/>
+<note measure="8" beat="3" duration="2" note="C#1sq"/>
+<note measure="8" beat="3" duration="2" note="E2sw"/>
+</instrument>
+</score>

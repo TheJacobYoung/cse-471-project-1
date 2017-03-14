@@ -4,66 +4,54 @@
 <body>
 <br/>
 <h1>CSE 471 - Project 1 - Synthisizer</h1>
-<b>Group Members:</b> Josh Lamb, Stephen Dunn, Vince Zickefoose, Usman Majeed, Luan Tran <br/>
+<b>Group Members:</b> Jacob Young, Evan Daykin, Andrew Schafer, Srikar Bollavaram<br/>
 <b>Components:</b><br/>
 <ul>
-    <li><a href="http://www.cse.msu.edu/~dunnste1/cse471/proj1/effects.html">Effects - Stephen Dunn</a></li>
-    <li><a href="http://www.cse.msu.edu/~dunnste1/cse471/proj1/additive.html">Additive - Luan Tran</a></li>
-    <li><a href="http://www.cse.msu.edu/~dunnste1/cse471/proj1/piano.html">Piano - Josh Lamb</a></li>
-    <li><a href="http://www.cse.msu.edu/~dunnste1/cse471/proj1/subtractive.html">Subtractive - Vince Zickefoose</a></li>
+    <li><a href="http://webdev.cse.msu.edu/~youngj69/cse471/project1/effects.html">Effects - Evan Daykin</a></li>
+    <li><a href="http://webdev.cse.msu.edu/~youngj69/cse471/project1/additive.html">Additive - Srikar Bollavaram</a></li>
+    <li><a href="http://webdev.cse.msu.edu/~youngj69/cse471/project1/drums.html">Drums - Andrew Schafer</a></li>
+    <li><a href="http://webdev.cse.msu.edu/~youngj69/cse471/project1/subtractive.html">Subtractive - Jacob Young</a></li>
 </ul>
 
 <b>Score File Format:</b>
 <pre class="code">
-core bpm=&quot;130&quot; beatspermeasure=&quot;4&quot;&gt;
+    Basic paramters of the score go here
+&lt;score bpm=&quot;120&quot; beatspermeasure=&quot;4&quot;&gt;
+
+    Stuff about effects goes here
   &lt;effectconfig name=&quot;Reverb&quot; slot=&quot;0&quot;/&gt;
   &lt;effectconfig name=&quot;Chorus&quot; slot=&quot;1&quot;/&gt;
   &lt;effectconfig name=&quot;Flange&quot; slot=&quot;2&quot;/&gt;
   &lt;effectconfig name=&quot;Compressor&quot; slot=&quot;3&quot;/&gt;
-  
-  &lt;instrumentparams instrument=&quot;OddSines&quot; bypassgain=&quot;0.3&quot; effect0=&quot;0.3&quot; effect1=&quot;0.3&quot; effect2=&quot;0.3&quot;
-effect3=&quot;0.0&quot; /&gt;
-  &lt;instrumentparams instrument=&quot;Piano&quot; bypassgain=&quot;0.3&quot; effect0=&quot;0.3&quot; effect1=&quot;0.1&quot; effect2=&quot;0.1&quot;
+
+    Parameters for the instruments goes here
+  &lt;instrumentparams instrument=&quot;Drums&quot; bypassgain=&quot;0.3&quot; effect0=&quot;0.3&quot; effect1=&quot;0.1&quot; effect2=&quot;0.1&quot;
 effect3=&quot;0.0&quot; /&gt;
   &lt;instrumentparams instrument=&quot;Subtractive&quot; bypassgain=&quot;0.3&quot; effect0=&quot;0.3&quot; effect1=&quot;0.3&quot;
 effect2=&quot;0.3&quot; effect3=&quot;0.0&quot; /&gt;
   &lt;instrumentparams instrument=&quot;Additive&quot; bypassgain=&quot;0.3&quot; effect0=&quot;0.3&quot; effect1=&quot;0.3&quot; effect2=&quot;0.3&quot;
 effect3=&quot;0.0&quot; /&gt;
 
-  &lt;instrument instrument=&quot;OddSines&quot;&gt;
-    &lt;note measure=&quot;1&quot; beat=&quot;1&quot; duration=&quot;0.2&quot; note=&quot;B3&quot;/&gt;
-    
-	... etc ...
-    
-  &lt;/instrument&gt;
+  &lt;instrument instrument=&quot;Drums&quot;&gt;
 
-  &lt;instrument instrument=&quot;Piano&quot;&gt;
-    &lt;note measure=&quot;10&quot; beat=&quot;1&quot; duration=&quot;0.4&quot; note=&quot;CompletePiano\B3l.wav&quot;/&gt;
-    
-	... etc ...
+    up to implementation...
 
   &lt;/instrument&gt;
 
   &lt;instrument instrument=&quot;Subtractive&quot;&gt;
     &lt;note measure=&quot;19&quot; beat=&quot;1&quot; duration=&quot;0.2&quot; note=&quot;B3 tr&quot;/&gt;
-    
-	... etc ...
-
   &lt;/instrument&gt;
 
   &lt;instrument instrument=&quot;Additive&quot;&gt;
     &lt;note measure=&quot;28&quot; beat=&quot;1&quot; duration=&quot;0.2&quot; note=&quot;B3&quot; harmonics=&quot;0.2 0 0.1 0 0.05 0 0.025 0
 0.025&quot;/&gt;
-    
-	... etc ...
-
   &lt;/instrument&gt;
-  
+
 &lt;/score&gt;
 </pre>
-<b>Selection title:</b> "Sounds of the Office" <br/>
-<b><a href="http://www.cse.msu.edu/~dunnste1/cse471/proj1/SoundsOfTheOffice.score">Selection Score File</a></b>
-<b><a href="http://www.cse.msu.edu/~dunnste1/cse471/proj1/soundsoftheoffice.wav">Selection WAV file</a></b>
+<b>Selection title:</b> "TBD" <br/>
+<b><a href="http://webdev.cse.msu.edu/~youngj69/cse471/project1/project1.score">Selection Score File</a></b>
+<b><a href="http://webdev.cse.msu.edu/~youngj69/cse471/project1/project1.wav">Selection WAV file</a></b>
 
 </body>
 </html>
