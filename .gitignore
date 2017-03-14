@@ -2,3 +2,4 @@
 *.VC.opendb
 ./Debug
 ./Synthie/Debug
+./web/.idea
