@@ -75,6 +75,9 @@
     <ClCompile Include="AR.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="DrumInstrument.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="audio\DirSound.h">
@@ -144,6 +147,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="AR.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DrumInstrument.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
