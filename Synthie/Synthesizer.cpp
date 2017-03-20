@@ -83,10 +83,6 @@ bool CSynthesizer::Generate(double * frame)
 		{
 			instrument = new CToneInstrument(GetBeatsPerMinute());
 		}
-		else if (note->Instrument() == L"Organ") {
-			m_organFactory.SetNote(note);
-			instrument = m_organFactory.CreateOrgan();
-		}
 
 		// Configure the instrument object
 		if (instrument != NULL)

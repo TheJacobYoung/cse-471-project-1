@@ -1,4 +1,25 @@
-﻿  DrumInstrument.cpp
+﻿  stdafx.cpp
+  ToneInstrument.cpp
+  WaveformWnd.cpp
+  WaveformBuffer.cpp
+  Wave.cpp
+  SynthieView.cpp
+  Synthie.cpp
+  Synthesizer.cpp
+  SineWave.cpp
+  ProgressDlg.cpp
+  Progress.cpp
+  Notes.cpp
+  Note.cpp
+  MainFrm.cpp
+  Instrument.cpp
+  DrumInstrument.cpp
+  DirSoundStream.cpp
+  DirSoundSource.cpp
+  DirSound.cpp
+  AudioNode.cpp
+  AR.cpp
+  Generating Code...
 AR.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
-  Synthie.vcxproj -> C:\Users\schaf170\Source\Repos\cse-471-project-1\Debug\Synthie.exe
-  Synthie.vcxproj -> C:\Users\schaf170\Source\Repos\cse-471-project-1\Debug\Synthie.pdb (Full PDB)
+  Synthie.vcxproj -> C:\Users\jacob_000\Documents\School\MSU\CSE 471\cse-471-project-1\Debug\Synthie.exe
+  Synthie.vcxproj -> C:\Users\jacob_000\Documents\School\MSU\CSE 471\cse-471-project-1\Debug\Synthie.pdb (Full PDB)
