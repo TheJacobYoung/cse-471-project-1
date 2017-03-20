@@ -8,7 +8,7 @@
 
 using namespace std;
 
-class COrgan:
+class COrgan :
 	public CInstrument
 {
 public:

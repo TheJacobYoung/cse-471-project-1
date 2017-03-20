@@ -42,7 +42,7 @@ bool COrganWave::Generate()
 	double vibMag = (m_vibratoMag / 100.0) * m_freq;
 	double sample = 0;
 
-	for (int i = 0; i < 9; i++){
+	for (int i = 0; i < 9; i++) {
 		sample += m_drawbars[i] * sin(m_phase * m_harmonics[i]);
 	}
 
@@ -58,14 +58,14 @@ bool COrganWave::Generate()
 	double leslieAttackPoint = m_leslieAttackTime * GetSampleRate();
 	double leslieReleasePoint = m_duration - (m_leslieReleaseTime * GetSampleRate());
 
-	if ((m_time < leslieAttackPoint) && m_leslieChanged){
+	if ((m_time < leslieAttackPoint) && m_leslieChanged) {
 		m_leslie_phase += 2 * PI * (m_leslieStartFreq + ((m_leslieFreq - m_leslieStartFreq) * (m_time / leslieAttackPoint))) * GetSamplePeriod();
 	}
-	else if (m_time > leslieReleasePoint){
+	else if (m_time > leslieReleasePoint) {
 		m_leslie_phase += 2 * PI * (m_leslieEndFreq + ((m_leslieFreq - m_leslieEndFreq) * (1 - ((m_time - leslieReleasePoint) / (m_duration - leslieReleasePoint))))) * GetSamplePeriod();
 		m_leslieStartFreq = m_leslieEndFreq;
 	}
-	else{
+	else {
 		m_leslie_phase += 2 * PI * m_leslieFreq * GetSamplePeriod();
 	}
 

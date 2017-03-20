@@ -28,7 +28,7 @@ void COrgan::Start()
 	m_time = 0;
 	m_organWave.SetSampleRate(GetSampleRate());
 	m_organWave.Start();
-	
+
 	m_envelope.SetSource(&m_organWave);
 	m_envelope.SetSampleRate(GetSampleRate());
 	m_envelope.Start();

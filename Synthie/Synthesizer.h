@@ -1,10 +1,13 @@
-using namespace std;
 #pragma once
 #include <list>
 #include <vector>
 #include "msxml2.h"
 #include "Instrument.h"
 #include "Note.h"
+#include "OrganFactory.h"
+
+using namespace std;
+
 class CSynthesizer
 {
 public:
@@ -46,6 +49,8 @@ private:
 	double m_beat;              //!< The current beat within the measure
 	std::list<CInstrument *>  m_instruments;
 	std::vector<CNote> m_notes;
+
+	COrganFactory m_organFactory;
 public:
 	void Start();
 	bool Generate(double*);

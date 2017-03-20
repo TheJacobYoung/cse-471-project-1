@@ -26,7 +26,7 @@ COrgan *COrganFactory::CreateOrgan()
 {
 	// this is where we actually create the organ
 	COrgan *organ = new COrgan();
-	
+
 	// set aattributes based on the parameters in the xml
 	organ->SetDrawbars(m_drawbars);
 	organ->SetAmplitude(m_amp);
