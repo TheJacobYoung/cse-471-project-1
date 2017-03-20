@@ -1,6 +1,8 @@
 *.VC.db
 *.VC.opendb
 ./Debug
-./Synthie/Debug
+./Synthie/Debug/*
 ./web/.idea
 ./ipch/*
+*.exe
+*.pch
