@@ -136,6 +136,10 @@
     <ClCompile Include="MainFrm.cpp" />
     <ClCompile Include="Note.cpp" />
     <ClCompile Include="Notes.cpp" />
+    <ClCompile Include="Organ.cpp" />
+    <ClCompile Include="OrganEnvelope.cpp" />
+    <ClCompile Include="OrganFactory.cpp" />
+    <ClCompile Include="OrganWave.cpp" />
     <ClCompile Include="Progress.cpp" />
     <ClCompile Include="ProgressDlg.cpp" />
     <ClCompile Include="SineWave.cpp" />
@@ -162,6 +166,10 @@
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="Note.h" />
     <ClInclude Include="Notes.h" />
+    <ClInclude Include="Organ.h" />
+    <ClInclude Include="OrganEnvelope.h" />
+    <ClInclude Include="OrganFactory.h" />
+    <ClInclude Include="OrganWave.h" />
     <ClInclude Include="Progress.h" />
     <ClInclude Include="ProgressDlg.h" />
     <ClInclude Include="Resource.h" />
