@@ -2,6 +2,7 @@
 #include "Synthesizer.h"
 #include "Instrument.h"
 #include "ToneInstrument.h"
+#include "DrumInstrument.h"
 #include "xmlhelp.h"
 #include <vector>
 #include <algorithm>
@@ -16,6 +17,7 @@ CSynthesizer::CSynthesizer()
 	m_bpm = 120;            
 	m_beatspermeasure = 4;
 	m_secperbeat = 0.5;     
+	m_waveinstfactory.LoadFile("drumriff.wav");
 }
 
 
@@ -87,6 +89,15 @@ bool CSynthesizer::Generate(double * frame)
 		{
 			m_organFactory.SetNote(note);
 			instrument = m_organFactory.CreateOrgan();
+		}
+		else if (note->Instrument() == L"DrumInstrument")
+		{
+			instrument = new CDrumInstrument();
+		}
+		else if (note->Instrument() == L"Wave")
+		{
+			m_waveinstfactory.SetNote(note);
+			instrument = m_waveinstfactory.CreateInstrument();
 		}
 
 		// Configure the instrument object

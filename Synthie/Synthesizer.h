@@ -6,6 +6,7 @@ using namespace std;
 #include "Instrument.h"
 #include "Note.h"
 #include "OrganFactory.h"
+#include "WaveInstrumentFactory.h"
 class CSynthesizer
 {
 public:
@@ -48,6 +49,8 @@ private:
 	std::list<CInstrument *>  m_instruments;
 	std::vector<CNote> m_notes;
     COrganFactory m_organFactory;
+	CWaveInstrumentFactory m_waveinstfactory;
+
 public:
 	void Start();
 	bool Generate(double*);
