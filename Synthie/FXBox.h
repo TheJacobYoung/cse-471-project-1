@@ -2,7 +2,6 @@
 #ifndef CFXBOX_H
 #define CFBOX_H
 #include <algorithm>
-#include "CircularBuffer.h"
 #include "Effect.h"
 using std::swap;
 class CFXBox
@@ -22,7 +21,9 @@ protected:
 	long m_buffersize = 44100;
 public:
 	void addEffect(CEffect* f) { m_effects.push_back(f);
-		f->setBox(*this);
+		f->setWetQ(this->m_processedDelay);
+                f->setDryQ(this->m_rawDelay);
+                f->setWrloc(getWrloc());
 	}
 	double* processEffects(double* frame) {
 		push_raw_frame(frame);
