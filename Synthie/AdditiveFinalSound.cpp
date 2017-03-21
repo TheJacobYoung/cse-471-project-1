@@ -48,19 +48,19 @@ bool CAdditiveFinalSound::Generate()
 		m_frame[1] = m_source->Frame(1) * (m_duration - m_time) / m_decay;
 	}
 
-	// Middle phase
-	// Used for sustaining
-	else if (m_time > m_decay && m_time < m_sustain)
-	{
-		m_frame[0] = m_source->Frame(0);
-		m_frame[1] = m_source->Frame(1);
-	}
-
 	// Release phase
 	else if (m_time > m_duration - m_release)
 	{
 		m_frame[0] = m_source->Frame(0) * ((m_duration - m_time) / m_release) * m_fadeOut;
 		m_frame[1] = m_source->Frame(1) * ((m_duration - m_time) / m_release) * m_fadeOut;
+	}
+
+	// Middle phase
+	// Used for sustaining
+	else
+	{
+		m_frame[0] = m_source->Frame(0);
+		m_frame[1] = m_source->Frame(1);
 	}
 
 	// Update time

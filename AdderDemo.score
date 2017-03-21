@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<score bpm="180" beatspermeasure="8">
+
+    <instrument instrument="AdditiveSynthesizer">
+		<note measure="1" beat="1" duration="2" a1="0.5" a2="0" a3="0" a4="0" a5="0" A_D_S_R="1 0 0 1"  note="G3"/>
+		<note measure="1" beat="3" duration="2" a1="0.5" A_D_S_R="1 0 0 1"   note="D4"/>
+		<note measure="1" beat="6" duration="2" a1="0.5" A_D_S_R="1 0 0 0.25"  note="B3"/>
+	</instrument>  
+
+	<instrument instrument="AdditiveSynthesizer">
+        <note measure="3" beat="1" duration="2" a1=".5" A_D_S_R=".05 0 0 0.5" note="D3"/>
+		<note measure="3" beat="3" duration="2" a1=".5" A_D_S_R=".2 0 0 .2" note="E3"/>
+		<note measure="3" beat="5" duration="2" a1=".5" A_D_S_R=".5 0 0 .5" note="F#3"/>
+		<note measure="3" beat="7" duration="2" a1=".5" A_D_S_R="1 0 0 .05" note="G3"/>
+		
+		<note measure="4" beat="3" duration="1" a1=".15" A_D_S_R=".05 0 0 0.5" note="D3"/>
+		<note measure="4" beat="3" duration="1" a1=".15" A_D_S_R=".05 0 0 0.5" note="D4"/>
+		
+		<note measure="4" beat="5" duration="1" a1=".15" A_D_S_R=".2 0 0 .2" note="E3"/>
+		<note measure="4" beat="5" duration="1" a1=".15" A_D_S_R=".2 0 0 .2" note="E4"/>
+		
+		<note measure="4" beat="7" duration="1" a1=".15" A_D_S_R=".5 0 0 .5" note="F#3"/>
+		<note measure="4" beat="7" duration="1" a1=".15" A_D_S_R=".5 0 0 .5" note="F#4"/>
+		
+		<note measure="5" beat="1" duration="1" a1=".15" A_D_S_R="1 0 0 .5" note="G3"/>
+		<note measure="5" beat="1" duration="1" a1=".15" A_D_S_R="1 0 0 .5" note="G4"/>
+	</instrument>
+	<!--
+	<instrument instrument="AdditiveSynthesizer">
+        <note measure="4" beat="5" duration="1" a1=".1" A_D_S_R="0 1 0 0" note="G3"/>
+		<note measure="4" beat="5" duration="1"  A_D_S_R="0 1 0 0" note="A3"/>
+		<note measure="4" beat="5" duration="1"  A_D_S_R="0 1 0 0" note="F3"/>
+		<note measure="4" beat="5" duration="1" A_D_S_R="0 1 0 0" note="B3"/>
+	</instrument> 
+	<instrument instrument="AdditiveSynthesizer">
+        <note measure="5" beat="1" duration="5" a1=".25" a2=".25" a3="0" a4="0" a5="0" FadeOut="3" A_D_S_R="1 4.5 4.5 .5" note="D1"/>
+		<note measure="5" beat="4" duration="2" a3=".25" a4=".25" FadeIn="3" A_D_S_R=".1 2 2 0" note="A3"/>
+	</instrument> 
+	<instrument instrument="AdditiveSynthesizer">
+        <note measure="6" beat="1" duration="3" vibrato="5 10" a1=".075" A_D_S_R="0 3 0 0" note="E3"/>
+		<note measure="6" beat="4" duration="3" vibrato="10 10" a2=".075" A_D_S_R="0 3 0 0" note="E3"/>
+	</instrument>
+	-->
+</score>
