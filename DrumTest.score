@@ -6,8 +6,11 @@
 		<note measure="1" beat="3.0" note="drum_3"  pitch="4" />
 		<note measure="1" beat="3.5" note="drum_4"  pitch="4" />
 		<note measure="1" beat="4.0" note="drum_5"  pitch="3" />
-
-		<note measure="2" beat="1.0" note="drum_6"  />
-		<note measure="2" beat="1.5" note="drum_7"  />
-			</instrument>
+		<note measure="2" beat="1.0" note="drum_6"  pitch="3" />
+		<note measure="2" beat="1.5" note="drum_7"  pitch="4" />
+		<note measure="3" beat="1.0" note="drum_19" pitch="3" />
+		<note measure="3" beat="3.0" note="drum_12" pitch="2" />
+		<note measure="4" beat="2.5" note="drum_16" pitch="4" />
+		<note measure="4" beat="2.5" note="drum_18" pitch="4" />
+	</instrument>
 </score>
