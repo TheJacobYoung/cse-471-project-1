@@ -1,0 +1,38 @@
+One page for each component that describes the functioning of that component in detail.
+Indicate ownership of each component and what grading elements are supported.
+
+Additive Synthesizer:
+
+-Overview:
+   -The additive synthesizer works by adding together sinusoids to make a sound
+   
+-Compoenents to support:
+    -Polyphony (Implemented):
+		-Polyphony simply means playing more than one note at a time.
+		-When you strum a guitar, you are playing six notes at a time.
+		-Polyphony means being able to start and stop more than one note at the same time.
+	
+	-Glissando (Implemented):
+		-Means a smooth transition between notes.
+	
+	-Cross-fading (Implemented):
+		-The idea of sound cross-fading is that you generate a single note from more
+		 than one set of sound definitions.
+		-You might start with note with sound A, then gradually change to sound B by
+		 interpolating between them
+		-Cross-fading allows for richer sounds, since the sound varies over its period.
+		
+	-Envelope generation (Implemented):
+		-How an instrument starts the sound and sustains it varies, but usually has a volume
+		 characteristic to it
+		-An example, a violin may slowly start the sound of a note or quickly start it for different songs.
+		-This is called an "attack".  Many instruments have a rapid decay after the attack, then sustain at another level,
+		 only to gradually decay at the end
+
+-Grading Critera:
+	10 - Sinusoid playback on demand from the sequencer (Implemented throughout demo)
+	20 - Definition of all harmonics (Implemented during second section of demo)
+	30 - Envelope generation (Implemented throughout demo)
+	35 - Polyphony (Implemented in second section of demo)
+	40 - Sound cross-fading (Implemented in third section of demo)
+	50 - Vibrato OR glissando (Both implemented: Vibrato in fourth section, gliss. in first section)

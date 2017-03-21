@@ -1,1 +1,42 @@
-This will be filled in with XML for the score that demonstrates this.
+<?xml version="1.0" encoding="utf-8"?>
+<score bpm="180" beatspermeasure="8">
+
+	<!--Intro/Gliss. Demo-->
+    <instrument instrument="AdditiveSynthesizer">
+		<note measure="1" beat="1" duration="2" a1="0.5" a2="0" a3="0" a4="0" a5="0" A_D_S_R="1 0 0 1"  note="G3"/>
+		<note measure="1" beat="3" duration="2" a1="0.5" A_D_S_R="1 0 0 1"   note="D4"/>
+		<note measure="1" beat="6" duration="2" a1="0.5" A_D_S_R="1 0 0 0.25"  note="B3"/>
+	</instrument>  
+
+	<!--Polyphony/Haromonics Demo-->
+	<instrument instrument="AdditiveSynthesizer">
+        <note measure="3" beat="1" duration="2" a1=".5" A_D_S_R=".05 0 0 0.5" note="D3"/>
+		<note measure="3" beat="3" duration="2" a1=".5" A_D_S_R=".2 0 0 .2" note="E3"/>
+		<note measure="3" beat="5" duration="2" a1=".5" A_D_S_R=".5 0 0 .5" note="F#3"/>
+		<note measure="3" beat="7" duration="2" a1=".5" A_D_S_R="1 0 0 .05" note="G3"/>
+		
+		<note measure="4" beat="3" duration="1" a1=".15" A_D_S_R=".05 0 0 0.5" note="D3"/>
+		<note measure="4" beat="3" duration="1" a1=".15" A_D_S_R=".05 0 0 0.5" note="D4"/>
+		
+		<note measure="4" beat="5" duration="1" a1=".15" A_D_S_R=".2 0 0 .2" note="E3"/>
+		<note measure="4" beat="5" duration="1" a1=".15" A_D_S_R=".2 0 0 .2" note="E4"/>
+		
+		<note measure="4" beat="7" duration="1" a1=".15" A_D_S_R=".5 0 0 .5" note="F#3"/>
+		<note measure="4" beat="7" duration="1" a1=".15" A_D_S_R=".5 0 0 .5" note="F#4"/>
+		
+		<note measure="5" beat="1" duration="1" a1=".15" A_D_S_R=".2 0 0 1" note="G3"/>
+		<note measure="5" beat="1" duration="1" a1=".15" A_D_S_R=".2 0 0 1" note="G4"/>
+	</instrument>
+	
+	<!--Fade Demo-->
+	<instrument instrument="AdditiveSynthesizer">
+        <note measure="6" beat="3" duration="3" a1=".5"  A_D_S_R="1 0 0 2" FadeOut="2" note="D3"/>
+		<note measure="7" beat="1" duration="3" a1=".5"  A_D_S_R="2 0 0 1" FadeIn="2" note="G3"/>
+	</instrument> 
+	
+	<!--Vibrato Demo-->
+	<instrument instrument="AdditiveSynthesizer">
+        <note measure="8" beat="2" duration="4" vibrato="5 10" a1=".5" A_D_S_R="0 0 0 3" note="E3"/>
+		<note measure="8" beat="6" duration="4" vibrato="10 10" a2=".5" A_D_S_R="0 0 0 3" note="E3"/>
+	</instrument>
+</score>
