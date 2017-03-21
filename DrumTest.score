@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<score bpm="75" beatspermeasure="4">
+	<instrument instrument="DrumInstrument">
+		<note measure="1" beat="1.0" note="drum_1"  pitch="4" />
+		<note measure="1" beat="2.0" note="drum_2"  pitch="2" />
+		<note measure="1" beat="3.0" note="drum_3"  pitch="4" />
+		<note measure="1" beat="3.5" note="drum_4"  pitch="4" />
+		<note measure="1" beat="4.0" note="drum_5"  pitch="3" />
+
+		<note measure="2" beat="1.0" note="drum_6"  />
+		<note measure="2" beat="1.5" note="drum_7"  />
+			</instrument>
+</score>

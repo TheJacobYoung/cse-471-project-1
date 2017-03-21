@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<score bpm="60" beatspermeasure="4">
+	<instrument instrument="DrumInstrument">
+		<note measure="1" beat="1.0" note="drum_1" pitch = "4" />
+	</instrument>
+</score>

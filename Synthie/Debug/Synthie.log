@@ -1,0 +1,5 @@
+﻿  OrganWave.cpp
+  LINK : C:\Users\schaf\Source\Repos\cse-471-project-1\Debug\Synthie.exe not found or not built by the last incremental link; performing full link
+AR.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+  Synthie.vcxproj -> C:\Users\schaf\Source\Repos\cse-471-project-1\Debug\Synthie.exe
+  Synthie.vcxproj -> C:\Users\schaf\Source\Repos\cse-471-project-1\Debug\Synthie.pdb (Full PDB)

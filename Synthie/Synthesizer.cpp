@@ -17,7 +17,7 @@ CSynthesizer::CSynthesizer()
 	m_bpm = 120;            
 	m_beatspermeasure = 4;
 	m_secperbeat = 0.5;     
-	m_waveinstfactory.LoadFile("drumriff.wav");
+	m_waveinstfactory.LoadFile("drum_4.wav");
 }
 
 
@@ -93,7 +93,8 @@ bool CSynthesizer::Generate(double * frame)
 		}
 		else if (note->Instrument() == L"DrumInstrument")
 		{
-			instrument = new CDrumInstrument();
+			m_druminstfactory.SetNote(note);
+			instrument = m_druminstfactory.CreateInstrument();
 		}
 		else if (note->Instrument() == L"Wave")
 		{

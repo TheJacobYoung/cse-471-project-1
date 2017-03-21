@@ -7,6 +7,8 @@ using namespace std;
 #include "Note.h"
 #include "OrganFactory.h"
 #include "WaveInstrumentFactory.h"
+#include "DrumInstrumentFactory.h"
+
 class CSynthesizer
 {
 public:
@@ -50,6 +52,8 @@ private:
 	std::vector<CNote> m_notes;
     COrganFactory m_organFactory;
 	CWaveInstrumentFactory m_waveinstfactory;
+	CDrumInstrumentFactory m_druminstfactory;
+
 
 public:
 	void Start();

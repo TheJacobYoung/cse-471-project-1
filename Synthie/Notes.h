@@ -38,3 +38,19 @@ const Notes notes[] = {{TEXT("A0"), 27.5}, {TEXT("A#0"), 29.1352}, {TEXT("Bb0"),
 {TEXT("A7"), 3520.0}, {TEXT("A#7"), 3729.31}, {TEXT("Bb7"), 3729.31}, {TEXT("B7"), 3951.07}, {TEXT("C8"), 4186.01}};
 
 double NoteToFrequency(const WCHAR *name);
+
+struct DrumSounds
+{
+	const TCHAR *name;
+	int pos;
+};
+
+const DrumSounds drumsounds[] = { { TEXT("drum_1"), 0 },{ TEXT("drum_2"), 1 },{ TEXT("drum_3"), 2 },
+{ TEXT("drum_4"), 3 },{ TEXT("drum_5"), 4 },{ TEXT("drum_6"), 5 },{ TEXT("drum_7"), 6 },
+{ TEXT("drum_8"), 7 },{ TEXT("drum_9"), 8 },{ TEXT("drum_10"), 9 },{ TEXT("drum_11"), 10 },{ TEXT("drum_12"), 11 },
+{ TEXT("drum_13"), 12 },{ TEXT("drum_14"), 13 },{ TEXT("drum_15"), 14 },
+{ TEXT("drum_16"), 15 },{ TEXT("drum_17"), 16 },{ TEXT("drum_18"), 17 },{ TEXT("drum_19"), 18 },
+{ TEXT("drum_20"), 19 }
+};
+
+int DrumToPosition(const WCHAR *name);
