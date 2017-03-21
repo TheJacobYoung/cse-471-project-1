@@ -30,6 +30,7 @@ private:
 	CAdditiveSynthSoundGenerator m_addSoundGen;
 	CAdditiveFinalSound m_addFinalSound;
 
+	double m_duration = 0;
 	double m_fadeIn = 0;
 	double m_fadeOut = 0;
 

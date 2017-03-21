@@ -74,13 +74,13 @@ void CAdditiveSynth::SetNote(CNote *note)
 		else if (name == "FadeIn")
 		{
 			value.ChangeType(VT_R8);
-			SetFadeInDuration(value.dblVal);
+			SetFadeInDuration(value.dblVal * m_duration);
 		}
 
 		else if (name == "FadeOut")
 		{
 			value.ChangeType(VT_R8);
-			SetFadeOutDuration(value.dblVal);
+			SetFadeOutDuration(value.dblVal * m_duration);
 		}
 
 		//Harmonic finder section

@@ -21,7 +21,10 @@ public:
 	void SetVibratoRate(double r) { m_vibRate = r; }
 	void SetVibratoFreq(double f) { m_vibFreq = f; }
 
+	void SetDuration(double d) { m_duration = d; }
+
 private:
+	double m_duration = 0;
 	double m_freq;
 	double m_phase = 0;
 	double m_harmonics[5] = { 0 };
