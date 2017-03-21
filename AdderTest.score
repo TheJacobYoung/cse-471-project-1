@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<score bpm="60" beatspermeasure="4">
+   <instrument instrument="AdditiveSynthesizer">
+      <note measure="1" beat="1" duration="1.9" note="C4" a1=".1" a3="0" a5="0" a7=".0125"/>
+      <note measure="1" beat="3" duration="1.9" note="G4" a1=".1" a3="0" a5="0" a7="0"/>
+      <note measure="2" beat="1" duration="3.7" note="C5" a1=".1" a3="0" a5="0" a7="0"/>  
+      <note measure="2" beat="4.75" duration="0.25" note="C4" a1=".1" a3="0" a5="0" a7="0"/>
+      <note measure="2" beat="4.75" duration="0.25" note="E4" a1=".1" a3="0" a5="0" a7="0"/>
+      <note measure="2" beat="4.75" duration="0.25" note="G4" a1=".1" a3="0" a5="0" a7="0"/> 
+      <note measure="3" beat="1.25" duration="4.75" note="C4" a1=".1" a3="0" a5="0" a7="0"/>
+      <note measure="3" beat="1.25" duration="4.75" note="Eb4" a1=".1" a3="0" a5="0" a7="0"/>
+      <note measure="3" beat="1.25" duration="4.75" note="G4" a1=".1" a3="0" a5="0" a7="0"/>
+   </instrument>
+   <instrument instrument="ToneInstrument">
+      <note measure="4" beat="1" duration="1.9" note="C4" a1=".5" a3=".4" a5=".3" a7=".2"/>
+      <note measure="4" beat="3" duration="1.9" note="G4" a1=".5" a3=".4" a5=".3" a7=".2"/>
+      <note measure="5" beat="1" duration="3.7" note="C5" a1=".5" a3=".4" a5=".3" a7=".2"/>  
+      <note measure="5" beat="4.75" duration="0.25" note="C4"/>
+      <note measure="5" beat="4.75" duration="0.25" note="E4"/>
+      <note measure="5" beat="4.75" duration="0.25" note="G4"/> 
+      <note measure="6" beat="1.25" duration="4.75" note="C4"/>
+      <note measure="6" beat="1.25" duration="4.75" note="Eb4"/>
+      <note measure="6" beat="1.25" duration="4.75" note="G4"/>
+   </instrument>
+</score>

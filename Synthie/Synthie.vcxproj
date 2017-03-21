@@ -127,6 +127,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AdditiveFinalSound.cpp" />
+    <ClCompile Include="AdditiveSynth.cpp" />
+    <ClCompile Include="AdditiveSynthSoundGenerator.cpp" />
     <ClCompile Include="AR.cpp" />
     <ClCompile Include="AudioNode.cpp" />
     <ClCompile Include="audio\DirSound.cpp" />
@@ -162,6 +165,9 @@
     <ClCompile Include="WavePlayer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AdditiveFinalSound.h" />
+    <ClInclude Include="AdditiveSynth.h" />
+    <ClInclude Include="AdditiveSynthSoundGenerator.h" />
     <ClInclude Include="AR.h" />
     <ClInclude Include="AudioNode.h" />
     <ClInclude Include="audio\DirSound.h" />
@@ -204,6 +210,7 @@
     <ClInclude Include="xmlhelp.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram.cd" />
     <None Include="res\Synthie.ico" />
     <None Include="res\Synthie.rc2" />
     <None Include="res\Toolbar.bmp" />

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<score bpm="120" beatspermeasure="2">
+	 
+	<instrument instrument="AdditiveSynthesizer">
+         <note measure="1" beat="1" duration="0.5" note="Bb4" a1 = "1" A_D_S_R="0 0 0.25 25"/>
+         <note measure="2" beat="1" duration="0.5" note="Bb4" a1 = "1" A_D_S_R="0 0 0.5 0"/>
+      
+         <note measure="3" beat="1" duration="0.5" note="Bb4" a1 = "1" A_D_S_R="0 0 0.5 0"/>
+         <note measure="3" beat="2" duration="0.5" note="Bb4" a1 = "1" A_D_S_R="0 0 0.5 0"/>
+         <note measure="4" beat="1" duration="0.5" note="Bb4" a1 = "1" A_D_S_R="0 0 0.5 0"/>
+
+         <note measure="5" beat="1" duration="0.5" note="G4" a1 = "1" A_D_S_R="0 0 0.5 0"/>
+         <note measure="5" beat="1.5" duration="0.5" note="F#4" a1 = "1" A_D_S_R="0 0 0.5 0"/>
+         <note measure="5" beat="2" duration="0.5" note="G4" a1 = "1" A_D_S_R="0 0 0.5 0"/>
+         <note measure="5" beat="2.5" duration="0.5" note="G#4" a1 = "1" A_D_S_R="0 0 0.5 0"/>
+
+         <note measure="6" beat="1" duration="1" note="A4" a1 = "1" A_D_S_R="0 0 1 0"/>
+         <note measure="6" beat="2" duration="1" note="F4" a1 = "1" A_D_S_R="0 0 1 0"/>
+      
+         <note measure="7" beat="1" duration="3" note="Bb4" a1 = "1" A_D_S_R="1 0 2 0" vibrato="10 10"/>
+    </instrument>
+</score>

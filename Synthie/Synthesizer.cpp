@@ -3,6 +3,7 @@
 #include "Instrument.h"
 #include "ToneInstrument.h"
 #include "DrumInstrument.h"
+#include "AdditiveSynth.h"
 #include "xmlhelp.h"
 #include <vector>
 #include <algorithm>
@@ -100,6 +101,11 @@ bool CSynthesizer::Generate(double * frame)
 		{
 			m_waveinstfactory.SetNote(note);
 			instrument = m_waveinstfactory.CreateInstrument();
+		}
+
+		else if (note->Instrument() == L"AdditiveSynthesizer")
+		{
+			instrument = new CAdditiveSynth();
 		}
 
 		// Configure the instrument object
