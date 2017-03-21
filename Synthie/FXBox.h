@@ -21,8 +21,8 @@ protected:
 	long m_buffersize = 44100;
 public:
 	void addEffect(CEffect* f) { m_effects.push_back(f);
-		f->setWetQ(this->m_processedDelay);
-                f->setDryQ(this->m_rawDelay);
+		f->setWetQ(&(this->m_processedDelay));
+                f->setDryQ(&(this->m_rawDelay));
                 f->setWrloc(getWrloc());
 	}
 	double* processEffects(double* frame) {
@@ -30,7 +30,7 @@ public:
 		double out[2];
 		out[0] = 0.;
 		out[1] = 0.;
-		for (vector<CEffect*>::iterator it = m_effects.begin(); it != m_effects.end; it++) {
+		for (vector<CEffect*>::iterator it = m_effects.begin(); it != m_effects.end(); it++) {
 			double* processed;
 			processed = (*it)->process();
 			out[0] += processed[0]/(double)m_effects.size();//weight balanced over number of effects
@@ -55,9 +55,9 @@ public:
 	double* read_processed_frame(int delay) {
 		return m_processedDelay.read(delay);
 	}
-	int getWrloc() const { return m_rawDelay.getWrloc(); }
-	CFXBox();
-	virtual ~CFXBox();
+	int* getWrloc() const { return m_rawDelay.getWrloc(); }
+	CFXBox() {};
+	virtual ~CFXBox() {};
 	//CFXBox& operator=(CFXBox& other) {
 	//	if (this != &other) {
 	//		m_buffersize = other.m_buffersize;

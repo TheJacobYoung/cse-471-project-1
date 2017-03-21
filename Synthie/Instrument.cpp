@@ -9,6 +9,7 @@ CInstrument::CInstrument()
 // Constructor to set the beats per minute
 CInstrument::CInstrument(double bpm)
 {
+	m_box = CFXBox();
 	m_bpm = bpm;
 }
 
