@@ -6,11 +6,47 @@
 <body>
 <br/>
 <h1>CSE 471 - Project 1 - Drums (Andrew Schafer)</h1>
-<h2>Sample Xml Configuration</h2>
-TBD
-<br/>
-<h2>Grading Elements - TBD</h2>
+<p>
+    Sources: www.99sounds.com (for wave files), original Synthie Project, online waveplayer tutorial, envelope information came from TA and https://en.wikipedia.org/wiki/ADSR.
+</p>
+<p>
+The basic function of this feature is to play a drum sound that can be added to the final composition. It is specified to play in the xml and has a total of 20 sounds that can be played by the program.
+The framework for this feature is based on the factory instrument model that is in place in the tutorial and original Synthie project. This structure allows synthesizer to do the original parsing of the xml file sorting the instruments. Then, in the respective factories for each instrument, drum in this case, the following attributes of each note are collected from the xml: note, measure, beat, and pitch. When the sound is generated, all of these attributes influence how the sound is created. What is different about the drum instrument is that most of the sound files are in wav form that exist as a file in the solution directory. In the Notes.cpp files, each of these names corresponds to an array number representing each of these loaded files at the beginning of the program. The “note” attribute corresponds with a loaded wav file and will call on that when it plays from the xml. The synthesized sound created in the “syntheticDrum” function is also added to the wave table and can be called in the xml with the corresponding name of drum_19. The system is also polyphonic by allowing notes to play in the same measure and allowing for more possibilities of sound creation. With following the Envelope Instructions giving by the instructors, attack and release is used. Effects is also integrated with the drums using the DrumInstrument component because it’s an implementation of the Instrument class and spreads for all of the instruments.
+</p>
+<p>
+    Important: To use drums the xml must follow this format:
+</p>
+<pre>
+    &lt;instrument instrument=&quot;DrumInstrument&quot;&gt;
+    &lt;note measure=&quot;1&quot; beat=&quot;1.0&quot; note=&quot;drum_20&quot; pitch = &quot;4&quot; /&gt;
+    &lt;/instrument&gt;
+</pre>
+<p>
+    *Effects can be added to this structure in order to utilize that feature as well. Evan Daykin completed this portion and will go in more depth on his page.
+</p>
 
+<h2>Grading Elements</h2>
+
+<ul>
+    <li>
+        10 - Waveform playback from tables
+    </li>
+    <li>
+        20 - Envelope generation
+    </li>
+    <li>
+        30 - Polyphony
+    </li>
+    <li>
+        35 - Varying pitch playback from tables
+    </li>
+    <li>
+        40 - At least 20 distinct drum sounds
+    </li>
+    <li>
+        50 - Synthesized drum
+    </li>
+</ul>
 
 <h2>Demonstration</h2>
 <a href="http://webdev.cse.msu.edu/~youngj69/cse471/project1/drums.score">Score File</a><br/>
