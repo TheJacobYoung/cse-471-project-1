@@ -29,7 +29,7 @@ bool CDrumInstrument::Generate()
 
 	m_frame[0] = m_drumenvelope.Frame(0);
 	m_frame[1] = m_drumenvelope.Frame(1);
-
+	m_box.processEffects(m_frame);
 	m_time += GetSamplePeriod();
 	return valid;
 }

@@ -28,6 +28,6 @@ bool CWaveInstrument::Generate()
 
 	m_frame[0] = m_wavePlayer.Frame(0);
 	m_frame[1] = m_frame[0];
-
+	m_box.processEffects(m_frame);
 	return valid;
 }

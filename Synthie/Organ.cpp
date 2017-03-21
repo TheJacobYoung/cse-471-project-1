@@ -58,6 +58,7 @@ bool COrgan::Generate()
 	bool valid = m_envelope.Generate();
 	m_frame[0] = m_envelope.Frame(0);
 	m_frame[1] = m_envelope.Frame(1);
+	m_box.processEffects(m_frame);
 	m_time += GetSamplePeriod();
 
 	return valid;

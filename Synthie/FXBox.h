@@ -28,7 +28,7 @@ public:
 	void setEffects(vector<CEffect*> v) {
 		m_effects = v;
 	}
-	double* processEffects(double* frame) {
+	void processEffects(double* frame) {
 		push_raw_frame(frame);
 		double out[2];
 		out[0] = 0.;

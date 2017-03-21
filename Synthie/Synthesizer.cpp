@@ -112,7 +112,7 @@ bool CSynthesizer::Generate(double * frame)
 			instrument->SetSampleRate(GetSampleRate());
 			instrument->SetNote(note);
 			instrument->Start();
-
+			instrument->setBox(*(note->getBox()));
 			m_instruments.push_back(instrument);
 		}
 
@@ -369,8 +369,6 @@ void CSynthesizer::XmlLoadInstrument(IXMLDOMNode * xml)
 			box.addEffect(ga);
 		}
 
-
-
 	}
 
 
@@ -392,5 +390,5 @@ void CSynthesizer::XmlLoadInstrument(IXMLDOMNode * xml)
 void CSynthesizer::XmlLoadNote(IXMLDOMNode * xml, std::wstring & instrument, CFXBox& box)
 {
 	m_notes.push_back(CNote());
-	m_notes.back().XmlLoad(xml, instrument);
+	m_notes.back().XmlLoad(xml, instrument, &box);
 }

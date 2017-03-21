@@ -49,7 +49,7 @@ bool CToneInstrument::Generate()
 	// Read the component's sample and make it our resulting frame.
 	m_frame[0] = m_ar.Frame(0);
 	m_frame[1] = m_ar.Frame(1);
-
+	m_box.processEffects(m_frame);
 	// Update time
 	m_time += GetSamplePeriod();
 

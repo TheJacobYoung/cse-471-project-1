@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include "FXBox.h"
 class CNote
 {
 public:
@@ -9,9 +10,12 @@ public:
 	double Beat() const { return m_beat; }
 	const std::wstring &Instrument() const { return m_instrument; }
 	IXMLDOMNode *Node() { return m_node; }
-	void XmlLoad(IXMLDOMNode * xml, std::wstring & instrument);
+	void XmlLoad(IXMLDOMNode * xml, std::wstring & instrument, CFXBox* box);
 	bool operator<(const CNote &b);
+	CFXBox* getBox() const { return box_ptr; }
+
 private:
+	CFXBox* box_ptr;
 	std::wstring m_instrument;
 	int m_measure;
 	double m_beat;
