@@ -66,7 +66,7 @@ bool COrganWave::Generate()
 	m_frame[1] = m_frame[0] = sample; // set the frame!
     
     // set phase for sound
-	m_phase += 2 * PI * ((m_freq + vibratoDiff) * leslieDiff) * GetSamplePeriod();
+	m_phase += 2 * PI * ((m_freq + vibratoDif) * leslieDif) * GetSamplePeriod();
     
     // set phase of vibrato
 	m_vibrato_phase += 2 * PI * m_vibratoFreq * GetSamplePeriod();
