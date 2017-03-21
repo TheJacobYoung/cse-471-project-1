@@ -1,8 +1,9 @@
 #pragma once
 #include <vector>
 #include "Organ.h"
+#include "InstrumentFactory.h"
 
-class COrganFactory
+class COrganFactory:public InstrumentFactory
 {
 public:
 	COrganFactory();

@@ -3,10 +3,11 @@
 #include "audio/DirSoundSource.h"
 #include "DrumEnvelope.h"
 #include "WavePlayer.h"
+#include "InstrumentFactory.h"
 #include "AR.h"
 #include <vector>
 
-class CDrumInstrumentFactory
+class CDrumInstrumentFactory:public InstrumentFactory
 {
 public:
 	CDrumInstrumentFactory();

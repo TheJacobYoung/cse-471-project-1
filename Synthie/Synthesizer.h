@@ -37,7 +37,7 @@ public:
 	void OpenScore(CString & );
 	void XmlLoadScore(IXMLDOMNode * xml);
 	void XmlLoadInstrument(IXMLDOMNode * xml);
-	void XmlLoadNote(IXMLDOMNode * xml, std::wstring & instrument);
+	void XmlLoadNote(IXMLDOMNode * xml, std::wstring & instrument, CFXBox& box);
 private:
 	int		m_channels;
 	double	m_sampleRate;

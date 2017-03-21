@@ -5,7 +5,7 @@ class CChorus:public CEffect
 public:
 	double* process() {
 		double wet[2] = { 0 };
-		double out[2] = { 0 };
+		double* out = (double*)malloc(sizeof(double) * 2);
 		double* dry = dry_q->read(0);
 		int delayIdx = *m_wrloc - (1102 + (220* sin(2 * PI*0.25*(*m_wrloc)))); //20-30ms
 		double* delayed = dry_q->read(delayIdx);
@@ -15,7 +15,7 @@ public:
 		out[1] = m_wet*wet[1] + m_dry*dry[1];
 		return out;
 	}
-	CChorus();
-	~CChorus();
+	CChorus() {};
+	~CChorus() {};
 };
 

@@ -1,8 +1,9 @@
 #pragma once
 #include "WaveInstrument.h"
+#include "InstrumentFactory.h"
 #include <vector>
 
-class CWaveInstrumentFactory
+class CWaveInstrumentFactory:public InstrumentFactory
 {
 public:
 	CWaveInstrumentFactory(void);

@@ -4,6 +4,10 @@
 #include "ToneInstrument.h"
 #include "DrumInstrument.h"
 #include "xmlhelp.h"
+#include "Chorus.h"
+#include "Compressor.h"
+#include "Gate.h"
+#include "Flange.h"
 #include <vector>
 #include <algorithm>
 
@@ -260,6 +264,8 @@ void CSynthesizer::XmlLoadScore(IXMLDOMNode * xml)
 		{
 			XmlLoadInstrument(node);
 		}
+
+
 	}
 }
 void CSynthesizer::OpenScore(CString & filename)
@@ -310,6 +316,7 @@ void CSynthesizer::OpenScore(CString & filename)
 void CSynthesizer::XmlLoadInstrument(IXMLDOMNode * xml)
 {
 	wstring instrument = L"";
+	CFXBox box;
 
 	// Get a list of all attribute nodes and the
 	// length of that list
@@ -337,6 +344,33 @@ void CSynthesizer::XmlLoadInstrument(IXMLDOMNode * xml)
 		{
 			instrument = value.bstrVal;
 		}
+
+		else if (name == "chorus") {
+			CEffect* ch = new CChorus();
+			ch->setWeight(value.dblVal);
+			box.addEffect(ch);
+		}
+
+		else if (name == "flange") {
+			CEffect* fl = new CFlange();
+			fl->setWeight(value.dblVal);
+			box.addEffect(fl);
+		}
+
+		else if (name == "compressor") {
+			CEffect* co = new CCompressor();
+			co->setWeight(value.dblVal);
+			box.addEffect(co);
+		}
+
+		else if (name == "gate") {
+			CEffect* ga = new CGate();
+			ga->setWeight(value.dblVal);
+			box.addEffect(ga);
+		}
+
+
+
 	}
 
 
@@ -350,12 +384,12 @@ void CSynthesizer::XmlLoadInstrument(IXMLDOMNode * xml)
 
 		if (name == L"note")
 		{
-			XmlLoadNote(node, instrument);
+			XmlLoadNote(node, instrument, box);
 		}
 	}
 
 }
-void CSynthesizer::XmlLoadNote(IXMLDOMNode * xml, std::wstring & instrument)
+void CSynthesizer::XmlLoadNote(IXMLDOMNode * xml, std::wstring & instrument, CFXBox& box)
 {
 	m_notes.push_back(CNote());
 	m_notes.back().XmlLoad(xml, instrument);

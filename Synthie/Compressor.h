@@ -7,7 +7,7 @@ private:
 public:
 	double* process() {
 		double wet[2] = { 0 };
-		double out[2] = { 0 };
+		double* out = (double*)malloc(sizeof(double)*2);
 		double* dry = dry_q->read(0);
 		if (dry[0] > m_threshold) {//attenuate samples above threshold
 			wet[0] = m_threshold+0.1*dry[0];
@@ -21,6 +21,6 @@ public:
 	CCompressor(double threshold) {
 		m_threshold = threshold;
 	}
-	~CCompressor();
+	~CCompressor() {};
 };
 

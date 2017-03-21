@@ -6,7 +6,7 @@ class CFlange :
 public:
 	double* process() {
 		double wet[2] = { 0 };
-		double out[2] = { 0 };
+		double* out = (double*)malloc(sizeof(double)*2);
 		double* dry = dry_q->read(0);
 		int delayIdx = *m_wrloc - (330+ (110*sin(2 * PI*0.25*(*m_wrloc)))); //5-10 ms
 		double* delayed = dry_q->read(delayIdx);
@@ -18,6 +18,6 @@ public:
 	}
 	CFlange() { setWeight(1); };
 	CFlange(int wetWeight) { setWeight(wetWeight); }
-	virtual ~CFlange();
+	virtual ~CFlange() {};
 };
 

@@ -5,10 +5,9 @@
 class CInstrument :
 	public CAudioNode
 {
-protected:
-	CFXBox m_box;
 public:
 	CInstrument();
+	virtual bool Generate() = 0;
 	CInstrument(double);
 	virtual ~CInstrument();
 	virtual void SetNote(CNote *note) = 0;

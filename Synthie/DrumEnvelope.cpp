@@ -46,6 +46,7 @@ bool CDrumEnvelope::Generate()
 
 	if (m_source != NULL)
 	{
+
 		m_frame[0] = m_source->Frame(0) * gain;
 		m_frame[1] = m_source->Frame(1) * gain;
 	}

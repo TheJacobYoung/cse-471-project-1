@@ -25,6 +25,9 @@ public:
                 f->setDryQ(&(this->m_rawDelay));
                 f->setWrloc(getWrloc());
 	}
+	void setEffects(vector<CEffect*> v) {
+		m_effects = v;
+	}
 	double* processEffects(double* frame) {
 		push_raw_frame(frame);
 		double out[2];
@@ -37,8 +40,10 @@ public:
 			out[1] += processed[1]/(double)m_effects.size();
 			clamp(out[0]);
 			clamp(out[1]);
+			free(processed);
 		}
 		push_processed_frame(out);
+		free(out);
 	}
 	double* read_raw_frame(int delay) {
 		return m_rawDelay.read(delay);

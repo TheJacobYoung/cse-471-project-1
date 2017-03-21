@@ -136,6 +136,7 @@
     <ClCompile Include="DrumInstrument.cpp" />
     <ClCompile Include="DrumInstrumentFactory.cpp" />
     <ClCompile Include="Instrument.cpp" />
+    <ClCompile Include="InstrumentFactory.cpp" />
     <ClCompile Include="MainFrm.cpp" />
     <ClCompile Include="Note.cpp" />
     <ClCompile Include="Notes.cpp" />
@@ -178,6 +179,7 @@
     <ClInclude Include="FXBox.h" />
     <ClInclude Include="Gate.h" />
     <ClInclude Include="Instrument.h" />
+    <ClInclude Include="InstrumentFactory.h" />
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="Note.h" />
     <ClInclude Include="Notes.h" />
