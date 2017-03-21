@@ -206,6 +206,27 @@
     <ClInclude Include="DrumEnvelope.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Chorus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CircularBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Compressor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Effect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Flange.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FXBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Gate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="res\Synthie.ico">

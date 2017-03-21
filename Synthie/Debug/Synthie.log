@@ -1,2 +1,3 @@
-﻿  Synthie.vcxproj -> C:\Users\schaf170\Source\Repos\cse-471-project-1\Debug\Synthie.exe
-  Synthie.vcxproj -> C:\Users\schaf170\Source\Repos\cse-471-project-1\Debug\Synthie.pdb (Full PDB)
+﻿  stdafx.cpp
+c:\users\daykinev\source\repos\cse-471-project-1\synthie\stdafx.cpp : fatal error C1041: cannot open program database 'C:\Users\daykinev\Source\Repos\cse-471-project-1\Synthie\Debug\vc140.idb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+cl : Command line warning D9028: minimal rebuild failure, reverting to normal build
