@@ -3,6 +3,7 @@
 #include "Instrument.h"
 #include "ToneInstrument.h"
 #include "DrumInstrument.h"
+#include "AdditiveSynth.h"
 #include "xmlhelp.h"
 #include <vector>
 #include <algorithm>
@@ -17,7 +18,7 @@ CSynthesizer::CSynthesizer()
 	m_bpm = 120;            
 	m_beatspermeasure = 4;
 	m_secperbeat = 0.5;     
-	m_waveinstfactory.LoadFile("drum_4.wav");
+	m_waveinstfactory.LoadFile("drumriff.wav");
 }
 
 
@@ -100,6 +101,11 @@ bool CSynthesizer::Generate(double * frame)
 		{
 			m_waveinstfactory.SetNote(note);
 			instrument = m_waveinstfactory.CreateInstrument();
+		}
+
+		else if (note->Instrument() == L"AdditiveSynthesizer")
+		{
+			instrument = new CAdditiveSynth();
 		}
 
 		// Configure the instrument object

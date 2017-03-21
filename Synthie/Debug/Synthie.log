@@ -1,5 +1,3 @@
-﻿  OrganWave.cpp
-  LINK : C:\Users\schaf\Source\Repos\cse-471-project-1\Debug\Synthie.exe not found or not built by the last incremental link; performing full link
-AR.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
-  Synthie.vcxproj -> C:\Users\schaf\Source\Repos\cse-471-project-1\Debug\Synthie.exe
-  Synthie.vcxproj -> C:\Users\schaf\Source\Repos\cse-471-project-1\Debug\Synthie.pdb (Full PDB)
+﻿  stdafx.cpp
+c:\users\daykinev\source\repos\cse-471-project-1\synthie\stdafx.cpp : fatal error C1041: cannot open program database 'C:\Users\daykinev\Source\Repos\cse-471-project-1\Synthie\Debug\vc140.idb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+cl : Command line warning D9028: minimal rebuild failure, reverting to normal build

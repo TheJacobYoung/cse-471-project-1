@@ -1,0 +1,63 @@
+One page for each component that describes the functioning of that component in detail.
+Indicate ownership of each component and what grading elements are supported.
+
+Additive Synthesizer:
+
+-Overview:
+   -The additive synthesizer works by adding together sinusoids to make a sound
+   
+-Compoenents to support:
+    -Polyphony (Implemented):
+		-Polyphony simply means playing more than one note at a time.
+		-When you strum a guitar, you are playing six notes at a time.
+		-Polyphony means being able to start and stop more than one note at the same time.
+	
+	-Glissando (Implemented):
+		-Means a smooth transition between notes.
+	
+	-Cross-fading (Implemented):
+		-The idea of sound cross-fading is that you generate a single note from more
+		 than one set of sound definitions.
+		-You might start with note with sound A, then gradually change to sound B by
+		 interpolating between them
+		-Cross-fading allows for richer sounds, since the sound varies over its period.
+		
+	-Envelope generation (Implemented):
+		-How an instrument starts the sound and sustains it varies, but usually has a volume
+		 characteristic to it
+		-An example, a violin may slowly start the sound of a note or quickly start it for different songs.
+		-This is called an "attack".  Many instruments have a rapid decay after the attack, then sustain at another level,
+		 only to gradually decay at the end
+
+-Grading Critera:
+	10 - Sinusoid playback on demand from the sequencer (Implemented throughout demo)
+	20 - Definition of all harmonics                    (Implemented during second section of demo)
+	30 - Envelope generation                            (Implemented throughout demo)
+	35 - Polyphony                                      (Implemented in second section of demo)
+	40 - Sound cross-fading                             (Implemented in third section of demo)
+	50 - Vibrato OR glissando                           (Both implemented: Vibrato in fourth section, gliss. in first section)
+	
+-Use:
+	Follow this format to create the XML score properly
+	EX:
+	-----------------------------------------------------------------------------------------------
+1	<?xml version="1.0" encoding="utf-8"?>
+2	<score bpm="180" beatspermeasure="8">
+
+3	<!--Intro/Gliss. Demo-->
+4   <instrument instrument="AdditiveSynthesizer">
+5		<note measure="1" beat="1" duration="2" a1="0.5" a2=".75" a3="0" a4="0" a5="0" A_D_S_R="1 0 0 1"  note="G3"/>
+6		<note measure="1" beat="3" duration="2" a1="0.5" A_D_S_R="1 0 0 1"  FadeOut="2" vibrato="5 10" note="D4"/>
+7		<note measure="1" beat="6" duration="2" a1="0.5" A_D_S_R="1 0 0 0.25" FadeIn="2" note="B3"/>
+8	</instrument>
+	-----------------------------------------------------------------------------------------------
+	
+	Attributes include:
+		-measure: measure of the score
+		-beat: beat number within the measure
+		-duration: duration of the note in beats
+		-[a1, a2, a3, a4, a5]: You can include up to 5 simultaneous amplitudes. Uninstantiated amplitudes
+							   defult to 0
+		-FadeIn/FadeOut: Sets the beat duration of fading in or out for that note
+		-vibrato: Takes two parameters. The first describes the frequency while the second describes the amplitude
+		-note: The note you want to play

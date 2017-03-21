@@ -105,6 +105,15 @@
     <ClCompile Include="DrumEnvelope.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="AdditiveFinalSound.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdditiveSynth.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdditiveSynthSoundGenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="audio\DirSound.h">
@@ -206,6 +215,36 @@
     <ClInclude Include="DrumEnvelope.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Chorus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CircularBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Compressor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Effect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Flange.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FXBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Gate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdditiveFinalSound.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdditiveSynth.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdditiveSynthSoundGenerator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="res\Synthie.ico">
@@ -223,6 +262,7 @@
     <None Include="UserImages.bmp">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Synthie.rc">
