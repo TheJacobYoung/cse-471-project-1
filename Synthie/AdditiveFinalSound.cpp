@@ -33,6 +33,11 @@ bool CAdditiveFinalSound::Generate()
 	// Tell the component to generate an audio sample
 	m_source->Generate();
 
+	if (m_fadeIn != 1 || m_fadeOut != 1)
+	{
+		int checker = 1;
+	}
+
 	// Read the component's sample and make it our resulting frame.
 	// Attack phase
 	if (m_time <  m_attack)
