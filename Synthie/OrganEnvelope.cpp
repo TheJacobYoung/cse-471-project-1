@@ -23,7 +23,7 @@ bool COrganEnvelope::Generate()
 {
 	//short attack and short decay
 	double gain = 1;
-	if (m_time < m_attack) // set gain in realtion to time related to the sttack period
+	if (m_time < m_attack) // set gain in relation to time related to the attack period
 	{
 		gain = 2 * (m_time / m_attack);
 	}

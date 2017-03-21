@@ -22,13 +22,13 @@ COrganFactory::~COrganFactory()
 {
 }
 
-COrgan *COrganFactory::CreateOrgan()
+COrgan *COrganFactory::CreateOrgan(double bpm)
 {
 	// this is where we actually create the organ
-	COrgan *organ = new COrgan();
+	COrgan *organ = new COrgan(bpm);
 
-	// set aattributes based on the parameters in the xml
-	organ->SetDrawbars(m_drawbars);
+	// set attributes based on the parameters in the xml
+	organ->SetWaveDrawbars(m_drawbars);
 	organ->SetAmplitude(m_amp);
 	organ->SetVibratoFreq(m_vibratoFreq);
 	organ->SetVibratoMag(m_vibratoMag);
@@ -77,7 +77,7 @@ void COrganFactory::SetNote(CNote *note)
 		if (name == "drawbar")
 		{
 			value.ChangeType(VT_I4);
-			SetDrawbars(value.intVal);
+			SetFactoryDrawbars(value.intVal);
 		}
 		else if (name == "amplitude")
 		{
@@ -135,7 +135,7 @@ void COrganFactory::SetNote(CNote *note)
 	}
 }
 
-void COrganFactory::SetDrawbars(int drawbarNum)
+void COrganFactory::SetFactoryDrawbars(int drawbarNum)
 {
 	// The drawbars indicate what harmonics are to be added to the note a key produces
 	int digit = 0;
@@ -143,7 +143,7 @@ void COrganFactory::SetDrawbars(int drawbarNum)
 
 	for (int i = 0; i < 9; i++)
 	{
-
+        // parse through the drawbars
 		digit = drawbarNum % (int)pow((double)10, (9 - i));
 		digit = digit / (int)pow((double)10, (8 - i));
 		if (digit != 0)

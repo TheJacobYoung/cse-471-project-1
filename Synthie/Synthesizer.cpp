@@ -87,8 +87,9 @@ bool CSynthesizer::Generate(double * frame)
 		}
         else if (note->Instrument() == L"Organ")
 		{
+			//m_organFactory = COrganFactory();
 			m_organFactory.SetNote(note);
-			instrument = m_organFactory.CreateOrgan();
+			instrument = m_organFactory.CreateOrgan(GetBeatsPerMinute());
 		}
 		else if (note->Instrument() == L"DrumInstrument")
 		{

@@ -27,13 +27,13 @@ public:
 	void SetLeslieChanged(bool isChanged) { m_organWave.SetLeslieChanged(isChanged); }
 	void SetLeslieRadius(double radius) { m_organWave.SetLeslieRadius(radius); }
 	void SetLeslieFreq(double frequency) { m_organWave.SetLeslieFreq(frequency); }
-	void SetDrawbars(vector<double> drawbars) { m_organWave.SetDrawbars(drawbars); }
+	void SetWaveDrawbars(vector<double> drawbars) { m_organWave.SetDrawbars(drawbars); }
 	void SetVibratoFreq(double vfreq) { m_organWave.SetVibratoFreq(vfreq); }
 	void SetVibratoMag(double vmag) { m_organWave.SetVibratoMag(vmag); }
 
 	double GetFrame(int i) { return m_frame[i]; }
 	virtual void SetNote(CNote *note);
-	void COrgan::SetDrawbars(int drawbarNum);
+	void COrgan::SetOrganDrawbars(int drawbarNum);
 
 	void SetFreq(double f) { m_organWave.SetFreq(f); }
 	void SetAmplitude(double a) { m_organWave.SetAmplitude(a); }

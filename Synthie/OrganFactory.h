@@ -8,9 +8,9 @@ public:
 	COrganFactory();
 	virtual ~COrganFactory();
 
-	COrgan *COrganFactory::CreateOrgan();
+	COrgan *COrganFactory::CreateOrgan(double bpm);
 	void COrganFactory::SetNote(CNote *note);
-	void SetDrawbars(int drawbarNum);
+	void SetFactoryDrawbars(int drawbarNum);
 
 private:
 	double m_amp;

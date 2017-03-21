@@ -63,13 +63,12 @@ bool COrgan::Generate()
 	return valid;
 }
 
-void COrgan::SetDrawbars(int drawbarNum)
+void COrgan::SetOrganDrawbars(int drawbarNum)
 {
 	// this sets up how the waves are generated
 	int digit = 0;
 	double sample = 0.0;
-	for (int i = 0; i < 9; i++) // 9 tonewheels
-	{
+	for (int i = 0; i < 9; i++){ // 9 tonewheels
 		// parse  through the numbers
 		digit = drawbarNum % (int)pow((double)10, (9 - i));
 		digit = digit / (int)pow((double)10, (8 - i));
@@ -78,7 +77,7 @@ void COrgan::SetDrawbars(int drawbarNum)
 			m_drawbars[i] = pow(10.0, (((8 - (double)digit) * -3) / 20));
 		}
 	}
-
+    SetWaveDrawbars(m_drawbars);
 }
 
 void COrgan::SetLeslieAttackTime(double leslieAttack)
@@ -122,7 +121,7 @@ void COrgan::SetNote(CNote *note)
 		if (name == "duration")
 		{
 			value.ChangeType(VT_R8);
-			SetDuration(value.dblVal);
+			SetDuration(value.dblVal * (NUM_SECS_IN_MINUTE / m_bpm));
 		}
 		else if (name == "note")
 		{
@@ -187,7 +186,7 @@ void COrgan::SetNote(CNote *note)
 		else if (name == "drawbar")
 		{
 			value.ChangeType(VT_I4);
-			SetDrawbars(value.intVal);
+			SetOrganDrawbars(value.intVal);
 		}
 	}
 

@@ -7,16 +7,21 @@ using namespace std;
 COrganWave::COrganWave()
 {
 	m_time = 0;
+    
 	m_vibratoFreq = 0;
 	m_vibratoMag = 0;
+    
 	m_leslieRadius = 0;
 	m_leslieAttackTime = 0;
 	m_leslieReleaseTime = 0;
 	m_leslie_phase = 0;
 	m_leslieStartFreq = 0;
 	m_amp = 1.0;
+    
 	m_drawbars.resize(9, 0.0);
 	m_drawbars[0] = 8.0;
+    
+    // these are the toneweels!
 	m_harmonics.resize(9, 0);
 	m_harmonics[0] = 1;
 	m_harmonics[1] = 3;
@@ -41,22 +46,32 @@ void COrganWave::Start()
 
 bool COrganWave::Generate()
 {
+    // set the magnitude of the virbato
 	double vibMag = (m_vibratoMag / 100.0) * m_freq;
 	double sample = 0;
 
+    // generate a sample from the 9 tonewheels
 	for (int i = 0; i < 9; i++) {
 		sample += m_drawbars[i] * sin(m_phase * m_harmonics[i]);
 	}
 
-	double leslieDiff = (1 + (m_leslieRadius * (cos(m_leslie_phase) / 340.3)));
-	double vibratoDiff = vibMag * sin(m_vibrato_phase);
+    // caluclate leslie difference from phase
+	double leslieDif = (1 + (m_leslieRadius * (cos(m_leslie_phase) / 340.3)));
+    
+    // caluclate vibrato difference from phase
+	double vibratoDif = vibMag * sin(m_vibrato_phase);
 
 	sample = sample * m_amp;
 
-	m_frame[1] = m_frame[0] = sample;
+	m_frame[1] = m_frame[0] = sample; // set the frame!
+    
+    // set phase for sound
 	m_phase += 2 * PI * ((m_freq + vibratoDiff) * leslieDiff) * GetSamplePeriod();
+    
+    // set phase of vibrato
 	m_vibrato_phase += 2 * PI * m_vibratoFreq * GetSamplePeriod();
 
+    // update leslie attack and release
 	double leslieAttackPoint = m_leslieAttackTime * GetSampleRate();
 	double leslieReleasePoint = m_duration - (m_leslieReleaseTime * GetSampleRate());
 
