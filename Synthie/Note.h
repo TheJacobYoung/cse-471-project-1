@@ -12,8 +12,16 @@ public:
 	IXMLDOMNode *Node() { return m_node; }
 	void XmlLoad(IXMLDOMNode * xml, std::wstring & instrument, CFXBox* box);
 	bool operator<(const CNote &b);
-	CFXBox* getBox() const { return box_ptr; }
-
+	CFXBox* getBox() const { 
+		if (box_ptr != NULL) { 
+			return box_ptr;
+		}
+		else 
+		{
+			return new CFXBox();
+		}
+	}
+	
 private:
 	CFXBox* box_ptr;
 	std::wstring m_instrument;

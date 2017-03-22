@@ -61,7 +61,10 @@ public:
 		return m_processedDelay.read(delay);
 	}
 	int* getWrloc() const { return m_rawDelay.getWrloc(); }
-	CFXBox() {};
+	CFXBox() {
+		m_rawDelay = CircularBuffer();
+		m_processedDelay = CircularBuffer();
+	};
 	virtual ~CFXBox() {};
 	//CFXBox& operator=(CFXBox& other) {
 	//	if (this != &other) {

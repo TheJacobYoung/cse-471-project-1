@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <score bpm="60" beatspermeasure="4">
-	<instrument instrument="Wave" chorus="0.9">
+	<instrument instrument="Wave" chorus="0.9" flange="0.5">
 		<note measure="1" beat="1" duration="8" note="C4"/>
 	</instrument>
 </score>
